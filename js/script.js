@@ -35,8 +35,10 @@ const toggleNavbar = function () {
 
 addEventOnElements(navTogglers, "click", toggleNavbar);
 
-// HEADER
+// HEADER & back to top
+
 const header = document.querySelector("[data-header]");
+const backToTop = document.querySelector("[data-back-top-btn]");
 
 let lastScrollPos = 0;
 
@@ -54,8 +56,10 @@ const hideHeader = function () {
 window.addEventListener("scroll", function () {
   if (this.window.scrollY >= 50) {
     header.classList.add("active");
+    backToBtn.classList.add("active");
   } else {
     header.classList.remove("active");
+    backTopBtn.classList.remove("active");
   }
 })
 
